@@ -1,0 +1,204 @@
+.Layout .LayoutContainer .MuiTypography-body1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Layout .LayoutContainer .MuiTypography-body2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Layout .LayoutContainer .MuiButtonBase-root {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.Layout .LayoutContainer .MuiInputBase-root {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Layout .LayoutContainer .MuiFormHelperText-root {
+    color: red;
+}
+
+.Layout .LayoutContainer .TextCapitalize {
+    text-transform: capitalize;
+}
+
+.Layout .LayoutContainer .Heading1 {
+    font-size: 36px !important;
+}
+
+.Layout .LayoutContainer .Heading2 {
+    font-size: 30px !important;
+}
+
+.Layout .LayoutContainer .Heading3 {
+    font-size: 20px !important;
+}
+
+.Layout .LayoutContainer .Heading4 {
+    font-size: 17px !important;
+}
+
+.Layout .LayoutContainer .Heading5 {
+    font-size: 16px !important;
+}
+
+.Layout .LayoutContainer .Heading6 {
+    font-size: 14px !important;
+}
+
+.Layout .LayoutContainer .BoldFont {
+    font-weight: bold !important;
+}
+
+.Layout .LayoutContainer .LinkEmbedTitle{
+    color: #005487;
+}
+
+.Layout .LayoutContainer .PrimaryColor1 {
+    color: #0075A9;
+}
+
+.Layout .LayoutContainer .PrimaryColor2 {
+    color: #005487;
+}
+
+.Layout .LayoutContainer .SecondaryColor1 {
+    color: #C2BC30;
+}
+
+.Layout .LayoutContainer .SecondaryColor2 {
+    color: #D93F49;
+}
+
+.Layout .LayoutContainer .SecondaryColor3 {
+    color: #FBAD18;
+}
+
+.Layout .LayoutContainer .FontColor1 {
+    color: #202020;
+}
+
+.Layout .LayoutContainer .FontColor2 {
+    color: #808080;
+}
+
+.Layout .LayoutContainer .FontColor3 {
+    color: #FFFFFF;
+}
+
+.Layout .LayoutContainer .FontColor4 {
+    color: #F4F4F4;
+}
+
+.Layout .LayoutContainer .FontColor5 {
+    color:  #808084;
+}
+
+.Layout .LayoutContainer .FontColor6 {
+    color:  #000;
+}
+
+.Layout .NavbarTabs.MuiTab-textColorInherit{
+    opacity: 1;
+}
+
+.Layout .NavbarTabs.MuiTab-root{
+    min-width: 120px;
+}
+.search-section{position: relative;}
+.searchSvg{
+    border: 1px solid black;
+    padding: 7px;
+    border-radius: 50px;
+    display: flex;
+    width: 20px;
+    height: 20px;
+}
+.view_shape {
+    position: absolute;
+    top:50px;
+    width: 88%;
+    max-height: 350px;
+    padding: 24px 24px 36px 27px;
+    border-radius: 12px;
+    box-shadow: 2px 4px 16px 4px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    overflow-y: auto;
+  }
+
+  .noResults{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.41px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-stretch: normal;
+    font-style: normal;
+    color: #005487;
+  }
+  .textlabel_Recent {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.29;
+    letter-spacing: -0.41px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 17px;
+    font-stretch: normal;
+    font-style: normal;
+    color: #005487;
+  }
+  .textlabel_Recent svg{
+    fill: none;
+  }
+  .search-heading{
+    display: flex;
+    gap:300px;
+    margin-bottom: 16px;
+
+  }
+  .search_results{
+    display: flex;
+    gap:16px;
+    padding: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .search_results div{
+    display: flex;
+    gap:16px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .searchImage{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+  }
+  .searchName{
+    font-size: 17px;
+    line-height: 1.29;
+    letter-spacing: -0.41px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    color: #808080;
+  }
+  .searchedText{
+    background-color: #00548740;
+    color: #808080;
+  }
+  .showall{
+    margin-top: 36px;
+    font-size: 17px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    line-height: 1.29;
+    letter-spacing: -0.41px;
+    color: #005487;
+    text-align: center;
+  }
+  mark{
+    background-color: #005487!important;
+    opacity: 0.25;
+  }
