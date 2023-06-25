@@ -1,19 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 // import { BrowserRouter as Router } from 'react-router-dom';
-import App from './App';
-import { Login } from './Login.web';
-import LayoutWeb from './layout/Layout.web';
-import { Box } from "@material-ui/core"
+import App from "./App";
+import { Login } from "./Login.web";
+import LayoutWeb from "./layout/Layout.web";
+import { Box } from "@material-ui/core";
+import UserProfile from "./Cards/UserProfile";
+import UserInfo from "./Cards/UserInfo";
+import OrgInfo from "./Cards/OrgInfo";
+import Activity from "./Cards/Activity";
+import Achievements from "./Cards/Achievements";
 
 ReactDOM.render(
-<Box width={"100%"} height={"100%"} display="flex" flexDirection={"column"} >
-    <LayoutWeb >
-      <p>test</p>
-      </LayoutWeb>
-      </Box>
-  ,
-  document.getElementById('root')
+  <Box width={"100%"} height={"100%"} display="flex" flexDirection={"column"}>
+    <LayoutWeb>
+      <UserProfile />
+      <UserInfo />
+      <OrgInfo />
+      <Activity />
+      <Achievements />
+    </LayoutWeb>
+  </Box>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
