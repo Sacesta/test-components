@@ -182,7 +182,7 @@ const styles = (theme: Theme) =>
       textAlign: "center",
       boxShadow: "none",
       border: "1px solid #808080",
-      width: "74%",
+      width: "87%",
       borderRadius: "12px",
       [theme.breakpoints.down("md")]: {
         margin: "0 auto",
@@ -192,7 +192,7 @@ const styles = (theme: Theme) =>
       background: "transparent",
       boxShadow: "none",
       border: "1px solid #808080",
-      width: "74%",
+      width: "87%",
       borderRadius: "12px",
       [theme.breakpoints.down("md")]: {
         margin: "0 auto",
@@ -789,9 +789,7 @@ class Layout extends LayoutController {
                 </Grid>
               )}
               <Grid className={classes.mt32} item xs={12} sm={12} md={8}>
-                <Grid container spacing={2}>
-                  {children}
-                </Grid>
+                {children}
               </Grid>
               {/* {(this.handleConditionalRender() || this.state.loggedInUserData) && <Grid item xs={12} sm={12} md={!this.handleConditionalRender() ? 8 :12}>
                             
