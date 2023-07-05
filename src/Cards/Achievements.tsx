@@ -17,6 +17,7 @@ const useStyles = makeStyles({
     borderRadius: "12px",
     padding: "24px",
     position: "relative",
+    border: "solid 1px #808080",
   },
   bottomBorder: {
     margin: "21.9px 0 20.1px",

@@ -16,9 +16,11 @@ const useStyles = makeStyles({
     maxWidth: "100%",
     marginBottom: "16px",
     borderRadius: "12px",
+    border: "solid 1px #808080",
   },
   media: {
     height: 180,
+    position: "relative",
   },
   cardContent: {
     position: "relative",
