@@ -38,6 +38,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import "./Layout.css";
 import LayoutController from "./LayoutController.web";
 import HomeIcon from "../assets/HomeIcon.web";
+import ContectCard from "../Cards/Contect";
 // import FilterSearchIcon from "./SVGIcons/FilterSearchIcon.web";
 // import CalenderEvents from "../../blocks/catalogue/src/CalenderEvents.web";
 // import CompanyIcon from "./SVGIcons/CompanyIcon.web";
@@ -581,7 +582,9 @@ class Layout extends LayoutController {
               } ${classes.LayoutContainerSpace}`}
               container
             >
-              {!this.handleConditionalRender() && (
+              <ContectCard />
+
+              {/* {!this.handleConditionalRender() && (
                 <Grid item xs={12} sm={12} md={4}>
                   <Grid
                     container
@@ -790,10 +793,7 @@ class Layout extends LayoutController {
               )}
               <Grid className={classes.mt32} item xs={12} sm={12} md={8}>
                 {children}
-              </Grid>
-              {/* {(this.handleConditionalRender() || this.state.loggedInUserData) && <Grid item xs={12} sm={12} md={!this.handleConditionalRender() ? 8 :12}>
-                            
-                            </Grid>} */}
+              </Grid> */}
             </Grid>
           </HomeContent>
         </Box>
