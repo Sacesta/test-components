@@ -50,7 +50,7 @@ export default function UserInfor() {
   return (
     <Grid item xs={12}>
       <Card className={`${classes.root}  `}>
-        <Box>
+        <Box borderBottom={"solid 0.3px #808080;"}>
           <Typography
             className={`Heading3 BoldFont FontColor6 TextCapitalize `}
             gutterBottom
@@ -111,7 +111,7 @@ export default function UserInfor() {
           </Box>
         </Box>
 
-        <Box display={"flex"} justifyContent={"space-between"}>
+        <Box pt={"20px"} display={"flex"} justifyContent={"space-between"}>
           <Box display={"flex"}>
             <Typography
               className={`Heading3 BoldFont FontColor6 TextCapitalize `}
@@ -136,11 +136,10 @@ export default function UserInfor() {
               • Private
             </Typography>
           </Box>
-
           <Box>icon</Box>
         </Box>
 
-        <Box pt="33px">
+        <Box>
           <Box display={"flex"} className={classes.bottomBorder}>
             <Box>icon</Box>
             <Box pl="17px" pb="20px">
