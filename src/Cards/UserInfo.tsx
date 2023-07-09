@@ -1,22 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import Button from "@material-ui/core/Button";
-
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  TextField,
-  Box,
-  Grid,
-  Card,
-  CardMedia,
-  Avatar,
-  CardContent,
-  CardHeader,
-} from "@material-ui/core";
+import { Typography, Box, Grid, Card } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
@@ -42,14 +26,91 @@ const useStyles = makeStyles({
     letterSpacing: "normal",
     color: "#000",
   },
+  mutualImage: {
+    height: "40px",
+    width: "40px",
+    borderRadius: "50%",
+  },
+  mutualImage1: {
+    position: "absolute",
+  },
+  mutualImage2: {
+    position: "absolute",
+    top: "36%",
+    left: "30%",
+  },
 });
 
 export default function UserInfor() {
   const classes = useStyles();
+  const link =
+    "https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=1090";
 
+  let user = 1;
   return (
     <Grid item xs={12}>
       <Card className={`${classes.root}  `}>
+        <Box>
+          <Typography
+            className={`Heading3 BoldFont FontColor6 TextCapitalize `}
+            gutterBottom
+            variant="body2"
+            component="p"
+            style={{ color: "#005487" }}
+          >
+            Highlights
+          </Typography>
+
+          <Box display={"flex"} position="relative">
+            <Box
+              display={"flex"}
+              alignItems={user === 1 && "center"}
+              justifyContent={"center"}
+            >
+              {user === 1 && (
+                <img className={classes.mutualImage} src={link} alt="..." />
+              )}
+              {user >= 2 && (
+                <Box
+                  paddingRight={"10px"}
+                  width={"50px"}
+                  paddingTop={"10px"}
+                  position={"relative"}
+                >
+                  <img
+                    className={`${classes.mutualImage} ${classes.mutualImage1}`}
+                    src={link}
+                    alt="..."
+                  />
+                  <img
+                    className={`${classes.mutualImage} ${classes.mutualImage2}`}
+                    src={link}
+                    alt="..."
+                  />
+                </Box>
+              )}
+            </Box>
+            <Box pt="12px" pb="20px" ml="12px">
+              <Typography
+                className={`Heading5 BoldFont FontColor6 TextCapitalize `}
+                gutterBottom
+                variant="body2"
+                component="p"
+              >
+                5 Mutual connections
+              </Typography>
+              <Typography
+                gutterBottom
+                variant="body2"
+                component="p"
+                className="Heading6 FontColor2"
+              >
+                You and Mr.ABC both know Mrs.User567,Mr.User789 and 3 others.{" "}
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
+
         <Box display={"flex"} justifyContent={"space-between"}>
           <Box display={"flex"}>
             <Typography

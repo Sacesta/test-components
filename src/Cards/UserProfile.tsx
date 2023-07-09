@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import CardActionArea from "@material-ui/core/CardActionArea";
 
@@ -50,6 +51,27 @@ const useStyles = makeStyles({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+  },
+  btn: {
+    padding: "10px 37px",
+    border: "solid 1px #005487",
+    fontFamily: "Verdana",
+    fontsize: "14px",
+    fontweight: "bold",
+    fontStretch: "normal",
+    fontStyle: "normal",
+    lineHeight: "norma",
+    letterSpacing: "normal",
+    textSlign: "center",
+    color: "#005487",
+  },
+  btn1: {
+    background: "#005487",
+    marginRight: "20px",
+    color: "white",
+    "&:hover": {
+      color: "#005487",
+    },
   },
 });
 
@@ -112,6 +134,12 @@ export default function UserProfile() {
             >
               <a href="">Contect Info</a>
             </Typography>
+          </Box>
+          <Box pt="17px" pl="24px">
+            <Button className={`${classes.btn} ${classes.btn1}`}>
+              Add Friend
+            </Button>
+            <Button className={`${classes.btn}`}>Message</Button>
           </Box>
         </CardContent>
       </Card>
