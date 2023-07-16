@@ -10,10 +10,14 @@ import UserInfo from "./Cards/UserInfo";
 import OrgInfo from "./Cards/OrgInfo";
 import Activity from "./Cards/Activity";
 import Achievements from "./Cards/Achievements";
+import FollowerList from "./Cards/FollowerList";
+import RequesManagement from "./Cards/RequestManagement";
 
 ReactDOM.render(
   <Box width={"100%"} height={"100%"} display="flex" flexDirection={"column"}>
     <LayoutWeb>
+      <RequesManagement />
+      <FollowerList />
       <UserProfile />
       <UserInfo />
       <OrgInfo />

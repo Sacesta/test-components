@@ -582,9 +582,9 @@ class Layout extends LayoutController {
               } ${classes.LayoutContainerSpace}`}
               container
             >
-              <ContectCard />
+              {/* <ContectCard /> */}
 
-              {/* {!this.handleConditionalRender() && (
+              {!this.handleConditionalRender() && (
                 <Grid item xs={12} sm={12} md={4}>
                   <Grid
                     container
@@ -793,7 +793,7 @@ class Layout extends LayoutController {
               )}
               <Grid className={classes.mt32} item xs={12} sm={12} md={8}>
                 {children}
-              </Grid> */}
+              </Grid>
             </Grid>
           </HomeContent>
         </Box>

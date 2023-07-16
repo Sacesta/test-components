@@ -32,7 +32,10 @@ const useStyles = makeStyles({
     borderRadius: "50%",
   },
   contecttext: {
-    color: "#f4f4f4",
+    "& a": {
+      color: "#005487",
+      textDecoration: "underline",
+    },
   },
   logoCircle: {
     background: "#ffffff",
@@ -87,11 +90,8 @@ export default function UserProfile() {
           title="Contemplative Reptile"
         >
           <Box className={classes.editIcon}>Test</Box>
-        </CardMedia>
-        <CardContent className={classes.cardContent}>
-          <Box className={classes.editIcon}>Test</Box>
 
-          <Box position={"absolute"} top={"-50%"}>
+          <Box position={"absolute"} top={"40%"} left={"2%"}>
             <Box className={classes.logoCircle}>
               <img
                 src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
@@ -100,6 +100,9 @@ export default function UserProfile() {
               />
             </Box>
           </Box>
+        </CardMedia>
+        <CardContent className={classes.cardContent}>
+          <Box className={classes.editIcon}>Test</Box>
 
           <Box pt="65px" pl="24px">
             <Typography
