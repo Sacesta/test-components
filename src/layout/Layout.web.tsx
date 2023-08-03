@@ -15,6 +15,7 @@ import {
   Tab,
   ListItem,
   InputAdornment,
+  Button,
 } from "@material-ui/core";
 import {
   createStyles,
@@ -199,6 +200,16 @@ const styles = (theme: Theme) =>
         margin: "0 auto",
       },
     },
+    FriednRequest: {
+      // background: "transparent",
+      boxShadow: "none",
+      border: "1px solid #808080",
+      width: "87%",
+      borderRadius: "12px",
+      [theme.breakpoints.down("md")]: {
+        margin: "0 auto",
+      },
+    },
     media: {
       display: "flex",
       alignItems: "center",
@@ -315,7 +326,54 @@ const styles = (theme: Theme) =>
         padding: "0 80px",
       },
     },
+
+    // Custom friend request  classes
+
+    userImageStyle: {
+      height: "50px",
+      borderRadius: "50%",
+    },
+
+    mutualImage: {
+      height: "16px",
+      width: "16px",
+      borderRadius: "50%",
+    },
+    mutualImage1: {
+      position: "absolute",
+    },
+    mutualImage2: {
+      position: "absolute",
+      top: "14%",
+      left: "29%",
+    },
+    btn: {
+      padding: "1px 25px",
+      border: "solid 1px #005487",
+      fontFamily: "Verdana",
+      fontsize: "5px",
+      fontStretch: "normal",
+      fontStyle: "normal",
+      lineHeight: "norma",
+      letterSpacing: "normal",
+      textSlign: "center",
+      color: "#005487",
+      borderRadius: "0px",
+    },
+    btn1: {
+      background: "#005487",
+      marginRight: "10px",
+      color: "white",
+      "&:hover": {
+        color: "#005487",
+      },
+    },
   });
+
+const link =
+  "https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=1090";
+
+let mutual = 2;
 
 const MenuList = styled(Box)({
   display: "flex",
@@ -788,6 +846,126 @@ class Layout extends LayoutController {
                         </Box>
                       </Card>
                     </Grid>
+                    {/* Friend Request */}
+                    <Grid container item xs={12}>
+                      <Card className={classes.FriednRequest}>
+                        <Box
+                          display={"flex"}
+                          alignItems="center"
+                          justifyContent={"space-between"}
+                          padding={"20px 20px"}
+                          borderBottom={"1px solid #005487"}
+                        >
+                          <Typography
+                            component="span"
+                            className="Heading4 BoldFont LinkEmbedTitle"
+                          >
+                            Friend Request
+                          </Typography>
+                          <Typography
+                            component="span"
+                            className="Heading6 LinkEmbedTitle"
+                          >
+                            Show all
+                          </Typography>
+                        </Box>
+                        <Box style={webPage.FRequestTabMain}>
+                          {/* Cards */}
+                          {[1, 2, 3].map(() => (
+                            <Box
+                              width={"100%"}
+                              display={"flex"}
+                              borderBottom={"1px solid #808080"}
+                              pb={"21px"}
+                              pt={"15px"}
+                            >
+                              <Box pr={"10px"} pl={"7px"}>
+                                <img
+                                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk6qKlLk50SrpDFulviyCpf0E2AcU9ncWXpA&usqp=CAU"
+                                  alt="User..."
+                                  className={classes.userImageStyle}
+                                />
+                              </Box>
+                              <Box pl={"2px"} pr={"14px"} width={"100%"}>
+                                <Box
+                                  display={"flex"}
+                                  justifyContent={"space-between"}
+                                  width={"100%"}
+                                >
+                                  <Typography
+                                    component="span"
+                                    className="Heading4 BoldFont "
+                                  >
+                                    Mr.Test
+                                  </Typography>
+                                  <Typography
+                                    component="span"
+                                    className="Heading6 FontColor2"
+                                  >
+                                    YesterDay
+                                  </Typography>
+                                </Box>
+                                <Box>
+                                  <Box display={"flex"} position="relative">
+                                    <Box
+                                      display={"flex"}
+                                      alignItems={mutual === 1 && "center"}
+                                      justifyContent={"center"}
+                                    >
+                                      {mutual === 1 && (
+                                        <img
+                                          className={classes.mutualImage}
+                                          src={link}
+                                          alt="..."
+                                        />
+                                      )}
+                                      {mutual >= 2 && (
+                                        <Box
+                                          paddingRight={"10px"}
+                                          width={"2rem"}
+                                          position={"relative"}
+                                          display={"flex"}
+                                          alignItems={"center"}
+                                        >
+                                          <img
+                                            className={`${classes.mutualImage} ${classes.mutualImage1}`}
+                                            src={link}
+                                            alt="..."
+                                          />
+                                          <img
+                                            className={`${classes.mutualImage} ${classes.mutualImage2}`}
+                                            src={link}
+                                            alt="..."
+                                          />
+                                        </Box>
+                                      )}
+                                    </Box>
+                                    <Box>
+                                      <Typography className="FontColor2 BoldFont Heading6">
+                                        Mutal Friends
+                                      </Typography>
+                                    </Box>
+                                  </Box>
+                                </Box>
+                                <Box>
+                                  <Box pt="7px">
+                                    <Button
+                                      className={`${classes.btn} ${classes.btn1}`}
+                                    >
+                                      Accept
+                                    </Button>
+                                    <Button className={`${classes.btn}`}>
+                                      Delete
+                                    </Button>
+                                  </Box>
+                                </Box>
+                              </Box>
+                            </Box>
+                          ))}
+                        </Box>
+                      </Card>
+                    </Grid>
+                    {/* Friend Request */}
                   </Grid>
                 </Grid>
               )}
@@ -818,6 +996,16 @@ const webPage = {
   imgStyle: {
     width: "20px",
     cursor: "pointer",
+  },
+  // Friend Request css
+  FRequestTabMain: {
+    display: "flex",
+    bgcolor: "#fff",
+    alignItems: "center",
+    borderRadius: "12px",
+    background: "#fff",
+    marginBottom: "3px",
+    "flex-direction": "column",
   },
 };
 
