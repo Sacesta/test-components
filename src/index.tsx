@@ -13,6 +13,7 @@ import Achievements from "./Cards/Achievements";
 import FollowerList from "./Cards/FollowerList";
 import RequesManagement from "./Cards/RequestManagement";
 import AchievementsUser from "./Cards/Achievements_user";
+import FriendList from "./Cards/FriendList";
 
 ReactDOM.render(
   <Box width={"100%"} height={"100%"} display="flex" flexDirection={"column"}>
@@ -25,6 +26,7 @@ ReactDOM.render(
       <OrgInfo />
       <Activity />
       <Achievements />
+      <FriendList />
     </LayoutWeb>
   </Box>,
   document.getElementById("root")
