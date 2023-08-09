@@ -12,10 +12,12 @@ import Activity from "./Cards/Activity";
 import Achievements from "./Cards/Achievements";
 import FollowerList from "./Cards/FollowerList";
 import RequesManagement from "./Cards/RequestManagement";
+import AchievementsUser from "./Cards/Achievements_user";
 
 ReactDOM.render(
   <Box width={"100%"} height={"100%"} display="flex" flexDirection={"column"}>
     <LayoutWeb>
+      <AchievementsUser />
       <RequesManagement />
       <FollowerList />
       <UserProfile />

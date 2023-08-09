@@ -39,7 +39,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import "./Layout.css";
 import LayoutController from "./LayoutController.web";
 import HomeIcon from "../assets/HomeIcon.web";
-import ContectCard from "../Cards/Contect";
+// import ContectCard from "../Cards/Contect";
 // import FilterSearchIcon from "./SVGIcons/FilterSearchIcon.web";
 // import CalenderEvents from "../../blocks/catalogue/src/CalenderEvents.web";
 // import CompanyIcon from "./SVGIcons/CompanyIcon.web";
@@ -201,9 +201,7 @@ const styles = (theme: Theme) =>
       },
     },
     FriednRequest: {
-      // background: "transparent",
       boxShadow: "none",
-      border: "1px solid #808080",
       width: "87%",
       borderRadius: "12px",
       [theme.breakpoints.down("md")]: {
@@ -846,6 +844,110 @@ class Layout extends LayoutController {
                         </Box>
                       </Card>
                     </Grid>
+                    {/* User */}
+                    {/* Friend Request */}
+                    <Grid container item xs={12}>
+                      <Card className={classes.FriednRequest}>
+                        <Box
+                          display={"flex"}
+                          alignItems="center"
+                          justifyContent={"space-between"}
+                          padding={"20px 20px"}
+                          borderBottom={"1px solid #005487"}
+                        >
+                          <Typography
+                            component="span"
+                            className="Heading4 BoldFont LinkEmbedTitle"
+                          >
+                            Friends
+                          </Typography>
+                          <Typography
+                            component="span"
+                            className="Heading6 LinkEmbedTitle"
+                          >
+                            Show all
+                          </Typography>
+                        </Box>
+                        <Box style={webPage.FRequestTabMain}>
+                          {/* Cards */}
+                          {[1, 2, 3].map(() => (
+                            <Box
+                              width={"100%"}
+                              display={"flex"}
+                              borderBottom={"1px solid #808080"}
+                              pb={"21px"}
+                              pt={"15px"}
+                            >
+                              <Box pr={"10px"} pl={"7px"}>
+                                <img
+                                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk6qKlLk50SrpDFulviyCpf0E2AcU9ncWXpA&usqp=CAU"
+                                  alt="User..."
+                                  className={classes.userImageStyle}
+                                />
+                              </Box>
+                              <Box pl={"2px"} pr={"14px"} width={"100%"}>
+                                <Box
+                                  display={"flex"}
+                                  justifyContent={"space-between"}
+                                  width={"100%"}
+                                >
+                                  <Typography
+                                    component="span"
+                                    className="Heading4 BoldFont "
+                                  >
+                                    Mr.Test
+                                  </Typography>
+                                </Box>
+                                <Box>
+                                  <Box display={"flex"} position="relative">
+                                    <Box
+                                      display={"flex"}
+                                      alignItems={mutual === 1 && "center"}
+                                      justifyContent={"center"}
+                                    >
+                                      {mutual === 1 && (
+                                        <img
+                                          className={classes.mutualImage}
+                                          src={link}
+                                          alt="..."
+                                        />
+                                      )}
+                                      {mutual >= 2 && (
+                                        <Box
+                                          paddingRight={"10px"}
+                                          width={"2rem"}
+                                          position={"relative"}
+                                          display={"flex"}
+                                          alignItems={"center"}
+                                        >
+                                          <img
+                                            className={`${classes.mutualImage} ${classes.mutualImage1}`}
+                                            src={link}
+                                            alt="..."
+                                          />
+                                          <img
+                                            className={`${classes.mutualImage} ${classes.mutualImage2}`}
+                                            src={link}
+                                            alt="..."
+                                          />
+                                        </Box>
+                                      )}
+                                    </Box>
+                                    <Box>
+                                      <Typography className="FontColor2 BoldFont Heading6">
+                                        Mutal Friends
+                                      </Typography>
+                                    </Box>
+                                  </Box>
+                                </Box>
+                              </Box>
+                            </Box>
+                          ))}
+                        </Box>
+                      </Card>
+                    </Grid>
+                    {/* Friend Request */}
+                    {/* User */}
                     {/* Friend Request */}
                     <Grid container item xs={12}>
                       <Card className={classes.FriednRequest}>
