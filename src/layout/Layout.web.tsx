@@ -342,7 +342,7 @@ const styles = (theme: Theme) =>
     },
     mutualImage2: {
       position: "absolute",
-      top: "14%",
+      top: "13%",
       left: "29%",
     },
     btn: {
