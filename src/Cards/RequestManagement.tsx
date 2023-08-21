@@ -10,6 +10,7 @@ import {
   Button,
 } from "@material-ui/core";
 import FollowerModal from "./Modal/FollowerModal";
+import SearchModal from "./Modal/SearchModal";
 
 const useStyles = makeStyles({
   root: {
@@ -135,7 +136,9 @@ export default function RequesManagement() {
                 >
                   Friend Request
                 </Typography>
-                <span>&#128269;</span>
+                <span>
+                  <SearchModal />
+                </span>
               </Box>
               <Box>
                 {/*  */}

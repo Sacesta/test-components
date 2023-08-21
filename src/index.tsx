@@ -17,8 +17,8 @@ import AchievementsUser from "./Cards/Achievements_user";
 ReactDOM.render(
   <Box width={"100%"} height={"100%"} display="flex" flexDirection={"column"}>
     <LayoutWeb>
-      <AchievementsUser />
       <RequesManagement />
+      <AchievementsUser />
       <FollowerList />
       <UserProfile />
       <UserInfo />

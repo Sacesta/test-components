@@ -52,6 +52,7 @@ export default function FollowerModal() {
           vertical: "top",
           horizontal: "right",
         }}
+        style={{ borderRadius: "12px" }}
       >
         <MenuItem className="menu" onClick={handleClose}>
           <Box

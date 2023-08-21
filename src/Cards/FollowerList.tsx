@@ -44,6 +44,10 @@ const useStyles = makeStyles({
     letterSpacing: "-0.41px",
     marginTop: "23px",
   },
+  scroll: {
+    maxHeight: "19rem",
+    overflow: "scroll",
+  },
 });
 
 export default function FollowerList() {
@@ -80,65 +84,8 @@ export default function FollowerList() {
                 </Typography>
                 <span>&#128269;</span>
               </Box>
-              <Box>
-                {/*  */}
-                <Box
-                  mt={"20px"}
-                  display={"flex"}
-                  justifyContent={"space-between"}
-                >
-                  <Box display={"flex"}>
-                    <img
-                      src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=2000"
-                      alt="..."
-                      className={classes.cardUserImage}
-                    />
-                    <Typography className={classes.cardText}>
-                      UserName
-                    </Typography>
-                  </Box>
-                  <Box style={{ cursor: "pointer" }}>
-                    <FollowerModal />
-                  </Box>
-                </Box>
-                <Box
-                  mt={"20px"}
-                  display={"flex"}
-                  justifyContent={"space-between"}
-                >
-                  <Box display={"flex"}>
-                    <img
-                      src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=2000"
-                      alt="..."
-                      className={classes.cardUserImage}
-                    />
-                    <Typography className={classes.cardText}>
-                      UserName
-                    </Typography>
-                  </Box>
-                  <Box style={{ cursor: "pointer" }}>
-                    <FollowerModal />
-                  </Box>
-                </Box>
-                <Box
-                  mt={"20px"}
-                  display={"flex"}
-                  justifyContent={"space-between"}
-                >
-                  <Box display={"flex"}>
-                    <img
-                      src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=2000"
-                      alt="..."
-                      className={classes.cardUserImage}
-                    />
-                    <Typography className={classes.cardText}>
-                      UserName
-                    </Typography>
-                  </Box>
-                  <Box style={{ cursor: "pointer" }}>
-                    <FollowerModal />
-                  </Box>
-                </Box>
+              <Box className={classes.scroll}>
+                {/* {map list } */}
                 <Box
                   mt={"20px"}
                   display={"flex"}
